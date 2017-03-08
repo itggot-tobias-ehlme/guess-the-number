@@ -48,11 +48,36 @@ def leveluno
       puts "You have #{tries} tries left"
     end
     if tries == 0
-      x = "DESTRUCTION INITIATED!, Goodbye world..."
+      system('cls')
+      x = "Wake up, Neo."
       i = 0
       while i < x.length
         print x[i]
-        sleep 0.09
+        sleep 0.2
+        i += 1
+      end
+      system('cls')
+      x = "Teh Matrx habe you."
+      i = 0
+      while i < x.length
+        print x[i]
+        sleep 0.2
+        i += 1
+      end
+      system('cls')
+      x = "Don't try to CTRL + C me boi, Follow the white rabbit"
+      i = 0
+      while i < x.length
+        print x[i]
+        sleep 0.2
+        i += 1
+      end
+      system('cls')
+      x = "Knock, knock, Neo."
+      i = 0
+      while i < x.length
+        print x[i]
+        sleep 0.2
         i += 1
       end
       exit
