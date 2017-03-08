@@ -5,6 +5,8 @@ end
 def welcome
   puts "Welcome to Guess the number!"
   puts "Please choose difficulty!"
+  puts "You can only choose level 1 atm"
+  puts "::[1]:: Level one, (1-10)"
   difficulty
 end
 
@@ -25,60 +27,40 @@ def difficulty
 end
 
 def leveluno
-
-  puts "Guess the secret number! (1-10)"
+  puts "You have choosen level 1!"
+  puts "Guess the secret number from 1-10"
   puts "You have 5 tries"
-  tries = 5
   secret = rand(1..10)
-
+  tries = 5
   running = true
   while running
     input = gets.to_i
-    if tries = 0
-      puts "You lost, die"
-      exit
     if input > secret
       tries -= 1
-      puts "Your number is greater than the secret number"
-      puts "Wrong number guess again!"
-      print "You have "
-      print tries
-      print " tries left!"
-    else
-      tries -= 1
-      puts "Your number is less than the secret number"
-      puts "Wrong number guess again!"
-      print "You have "
-      print tries
-      print " tries left"
+      puts "#{input} is higher than the secret number"
+      puts "Guess again!"
+      puts "You have #{tries} tries left"
     end
-
+    if input < secret
+      tries -= 1
+      puts "#{input} is lower than the secret number"
+      puts "Guess again!"
+      puts "You have #{tries} tries left"
+    end
+    if tries == 0
+      x = "DESTRUCTION INITIATED!, Goodbye world..."
+      i = 0
+      while i < x.length
+        print x[i]
+        sleep 0.09
+        i += 1
+      end
+      exit
+    end
     if input == secret
       puts "Gz you have found the number!"
       exit
-
-        tries -= 1
-        puts "Your number is greater than the secret number"
-        puts "Wrong number guess again!"
-        print "You have "
-        print tries
-        puts " tries left!"
-      else
-        tries -= 1
-        puts "Your number is less than the secret number"
-        puts "Wrong number guess again!"
-        print "You have "
-        print tries
-        puts " tries left!"
-      end
     end
   end
-
-def leveldos
-  puts "hej"
-end
-
-def leveltres
-  puts "hej!"
 end
 welcome
