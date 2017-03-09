@@ -2,6 +2,16 @@ def s
   sleep 1.2
 end
 
+def egg(string)
+  x = rand(0.05..0.09)
+  i = 0
+  while i < string.length
+    print string[i]
+    sleep x
+    i += 1
+  end
+end
+
 def welcome
   system('cls')
   puts "Welcome to Guess the number!"
@@ -30,46 +40,22 @@ end
 
 def endgame
   system('cls')
-  x = "Wake up, Neo."
-  i = 0
-  while i < x.length
-    print x[i]
-    sleep 0.1
-    i += 1
-  end
+  egg("Wake up Neo.")
   s
   system('cls')
-  x = "Teh Matrx habe you."
-  i = 0
-  while i < x.length
-    print x[i]
-    sleep 0.1
-    i += 1
-  end
+  egg("The Matrix has you.")
   s
   system('cls')
-  x = "Don't try to CTRL + C me boi, Follow the white rabbit."
-  i = 0
-  while i < x.length
-    print x[i]
-    sleep 0.1
-    i += 1
-  end
+  egg("Follow the white rabbit.")
   s
   system('cls')
-  x = "Knock, knock, Neo."
-  i = 0
-  while i < x.length
-    print x[i]
-    sleep 0.1
-    i += 1
-  end
+  egg("Knock, Knock, Neo.")
   s
   exit
 end
 
 def leveluno
-  puts "You have choosen level 1!"
+  puts "You have chosen level 1!"
   puts "Guess the secret number from 1-10"
   puts "You have 5 tries"
   secret = rand(1..10)
@@ -100,7 +86,7 @@ def leveluno
 end
 
 def leveldos
-  puts "You have choosen level 2!"
+  puts "You have chosen level 2!"
   puts "Guess the secret number from 1-15"
   puts "You have 5 tries"
   secret = rand(1..15)
@@ -131,7 +117,7 @@ def leveldos
 end
 
 def leveltres
-  puts "You have choosen level 3!"
+  puts "You have chosen level 3!"
   puts "Guess the secret number from 1-20"
   puts "You have 5 tries"
   secret = rand(1..20)
